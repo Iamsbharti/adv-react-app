@@ -1,0 +1,36 @@
+{
+  "name": "adv-react-app",
+  "version": "1.0.0",
+  "description": "An andvanced Reat app with manual configuration",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev-server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
+    "dev-bundle": "webpack -w -d"
+  },
+  "keywords": [],
+  "author": "Saurabh Bharti",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.3.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "jest": "^25.3.0",
+    "nodemon": "^2.0.3",
+    "react-test-renderer": "^16.13.1"
+  }
+}
