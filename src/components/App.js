@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { data } from "./testData";
+import { data } from "../testData";
 import DataApi from "../DataApi";
 import ArticleList from "./ArticleList";
 
-console.log(data);
 const api = new DataApi(data);
 class App extends Component {
   constructor() {
