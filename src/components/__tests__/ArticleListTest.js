@@ -20,5 +20,6 @@ describe("Render ArticleList Component", () => {
       .toJSON();
     //console.log(tree);
     expect(tree.children.length).toBe(2);
+    expect(tree).toMatchSnapshot();
   });
 });

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
-    "dev-server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
+    "dev-server": "NODE_PATH=./src nodemon --exec babel-node src/server/server.js --ignore dist/",
     "dev-bundle": "webpack -w -d"
   },
   "keywords": [],
@@ -20,6 +20,7 @@
     "@types/jest": "^25.2.1",
     "babel-loader": "^8.1.0",
     "express": "^4.17.1",
+    "pm2": "^4.2.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "webpack": "^4.42.1",
