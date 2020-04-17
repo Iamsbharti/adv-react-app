@@ -26,7 +26,10 @@ const dateFormat = (date) => {
   return new Date(date).toDateString();
 };
 
-function Article({ article, author }) {
+function Article({ article, loadAuthor }) {
+  //console.log(article);
+  const author = loadAuthor(article.authorId);
+  //console.log(author);
   return (
     <div style={styles.article}>
       <div style={styles.title}>{article.title}</div>

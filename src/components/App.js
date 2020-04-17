@@ -11,14 +11,17 @@ class App extends Component {
       articles: api.getArticles(),
       authors: api.getAuthors(),
     };
+    this.loadAuthors = this.loadAuthors.bind(this);
   }
-
+  loadAuthors(authorId) {
+    return this.state.authors[authorId];
+  }
   render() {
     return (
       <div>
         <ArticleList
           articles={this.state.articles}
-          authors={this.state.authors}
+          loadAuthors={this.loadAuthors}
         />
       </div>
     );

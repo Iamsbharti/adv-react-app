@@ -7,7 +7,8 @@ function ArticleList(props) {
         <Article
           key={article.id}
           article={article}
-          author={props.authors[article.authorId]}
+          //author={props.authors[article.authorId]}
+          loadAuthor={props.loadAuthors}
         />
       ))}
     </div>
