@@ -1,16 +1,28 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
+import { data } from "./testData";
+import DataApi from "../DataApi";
+import ArticleList from "./ArticleList";
 
-export default function App() {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      This is a sample stateful and server-side rendered React application.
-      <br />
-      <br />
-      Here is a button that will track how many times you click it----:
-      <br />
-      <br />
-      <button onClick={() => setCount(count + 1)}>{count}</button>
-    </div>
-  );
+console.log(data);
+const api = new DataApi(data);
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      articles: api.getArticles(),
+      authors: api.getAuthors(),
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <ArticleList
+          articles={this.state.articles}
+          authors={this.state.authors}
+        />
+      </div>
+    );
+  }
 }
+export default App;
